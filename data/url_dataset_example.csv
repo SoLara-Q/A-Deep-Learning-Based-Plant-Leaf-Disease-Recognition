@@ -1,0 +1,5 @@
+split,label,url
+train,healthy,https://example.com/leaf_healthy_001.jpg
+train,disease,https://example.com/leaf_disease_001.jpg
+val,healthy,https://example.com/leaf_healthy_101.jpg
+val,disease,https://example.com/leaf_disease_101.jpg

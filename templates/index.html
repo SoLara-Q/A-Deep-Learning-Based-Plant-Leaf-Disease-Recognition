@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>植物叶片病变检测系统</title>
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+</head>
+<body>
+<div class="page">
+    <header class="hero">
+        <div>
+            <p class="tag">PyTorch + Flask + ECharts</p>
+            <h1>植物叶片病变检测系统</h1>
+            <p class="subtitle">上传叶片图片，系统将返回预测病害类别、置信度和概率分布。</p>
+        </div>
+        <div class="status {{ 'ok' if model_exists else 'warn' }}">
+            {{ '模型已就绪' if model_exists else '未检测到模型，请先训练' }}
+        </div>
+    </header>
+
+    <main class="grid">
+        <section class="card">
+            <h2>本地图片检测</h2>
+            <p class="hint">支持 jpg、jpeg、png、webp，最大 8MB。</p>
+            <label class="upload-box" for="fileInput">
+                <span>点击选择叶片图片</span>
+                <small>或将图片拖拽到这里</small>
+            </label>
+            <input id="fileInput" type="file" accept="image/*" hidden />
+            <button id="uploadBtn" class="primary">开始检测</button>
+        </section>
+
+        <section class="card">
+            <h2>网络图片 URL 检测</h2>
+            <p class="hint">输入一张公开可访问的图片链接。</p>
+            <input id="urlInput" class="text-input" placeholder="https://example.com/leaf.jpg" />
+            <button id="urlBtn" class="primary secondary">检测 URL 图片</button>
+        </section>
+
+        <section class="card preview-card">
+            <h2>图片预览</h2>
+            <div class="image-preview">
+                <img id="previewImage" alt="预览图片" />
+                <span id="previewText">暂无图片</span>
+            </div>
+        </section>
+
+        <section class="card result-card">
+            <h2>检测结果</h2>
+            <div id="message" class="message">等待检测...</div>
+            <div id="resultPanel" class="result-panel hidden">
+                <div class="result-main">
+                    <span class="label">预测结果</span>
+                    <strong id="predictedLabel">-</strong>
+                    <span id="confidence">-</span>
+                </div>
+                <div id="chart" class="chart"></div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="/static/js/main.js"></script>
+</body>
+</html>
