@@ -1,4 +1,3 @@
-
 # 基于深度学习的植物叶片病变检测系统
 
 一个可运行的 **Python + PyTorch + Flask + ECharts** 植物叶片病害识别项目。项目支持：
@@ -16,6 +15,7 @@
 ## 1. 推荐开发工具
 
 ### 推荐：VS Code
+
 本项目是 Python + Flask + 前端页面项目，用 VS Code 最合适。
 
 推荐安装插件：
@@ -26,6 +26,7 @@
 - HTML CSS Support
 
 ### 也可以用 IDEA
+
 如果你使用 IntelliJ IDEA Ultimate，可以安装 Python 插件后运行；普通 IDEA Community 更适合 Java 项目，不太推荐写这个 Python 项目。
 
 ---
@@ -190,34 +191,7 @@ plant-disease-detection/
 
 ---
 
-## 8. 简历写法
-
-```text
-基于深度学习的植物叶片病变检测系统｜个人深度学习项目
-技术栈：Python、PyTorch、Flask、OpenCV、ECharts、HTML/CSS、JavaScript
-开发工具：VS Code、Anaconda、Chrome DevTools、Postman、Git
-
-项目描述：
-本项目是一套面向农作物叶片健康检测的图像识别辅助系统。系统支持用户上传植物叶片图片或输入网络图片 URL，后端通过 PyTorch 训练好的图像分类模型对叶片病害类别进行识别，并将预测类别、置信度和各类别概率分布返回前端展示。
-
-主要职责：
-1. 使用 Flask 搭建后端服务，完成图片上传、URL 图片下载、图片格式校验、图像预处理和模型推理接口开发。
-2. 使用 PyTorch 和 torchvision 基于 PlantVillage 公开数据集训练叶片病害分类模型，并保存模型权重用于 Web 推理。
-3. 设计并实现前端上传页面和结果展示页，支持图片预览、检测提交、异常提示和结果渲染。
-4. 使用 ECharts 对模型输出的各病害类别概率进行柱状图可视化展示，提高识别结果的可读性。
-5. 针对图片较大导致上传和加载较慢的问题，增加前端图片预览压缩和后端文件大小限制，提升系统响应速度。
-6. 使用 Postman 和浏览器开发者工具测试接口，覆盖正常图片、非图片文件、空文件、图片过大、URL 下载失败等异常场景。
-```
-
----
-
-## 9. 面试讲法
-
-面试官问“你这个项目怎么做的？”可以这样回答：
-
-> 这个项目主要是把深度学习图像分类模型接入到 Web 系统中。数据集方面我使用 PlantVillage 公开植物叶片病害数据集，先通过脚本从 Hugging Face 下载指定类别图片，然后用 PyTorch 的 ImageFolder 读取数据，基于 MobileNetV2 做迁移学习训练。Web 端使用 Flask 提供图片上传和 URL 图片检测接口，前端用 HTML/CSS/JavaScript 实现图片预览和提交，并用 ECharts 展示各病害类别的概率分布。这个项目的重点不是单纯训练模型，而是完成“数据下载、模型训练、模型推理、接口返回、前端可视化”的完整闭环。
-
----
+## 
 
 ## 10. 注意事项
 
