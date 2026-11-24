@@ -189,11 +189,7 @@ plant-disease-detection/
     └── launch.json
 ```
 
----
-
-## 
-
-## 10. 注意事项
+## 8. 注意事项
 
 1. 第一次下载数据集需要联网。
 2. 第一次使用 `--pretrained` 训练时，torchvision 会下载 MobileNetV2 预训练权重。
